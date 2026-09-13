@@ -5,12 +5,10 @@ import {
   BarChart3,
   Bell,
   Bot,
-  BriefcaseBusiness,
   CalendarDays,
   ChevronDown,
   CircleDollarSign,
   FolderKanban,
-  Gauge,
   LayoutDashboard,
   Link2,
   Plus,
@@ -48,14 +46,14 @@ export default function Home() {
           <div className="brand-mark">IT</div>
           <div>
             <div className="brand-name">IRON TRADING</div>
-            <div className="brand-tag">FUNDING OPERATING SYSTEM</div>
+            <div className="brand-tag">FUNDED TRADING INTELLIGENCE</div>
           </div>
         </div>
 
         <nav className="nav-list">
           {navItems.map(([Icon, label], index) => (
             <button className={`nav-item ${index === 0 ? 'active' : ''}`} key={label}>
-              <Icon size={19} strokeWidth={1.8} />
+              <Icon size={18} strokeWidth={1.75} />
               <span>{label}</span>
             </button>
           ))}
@@ -64,44 +62,54 @@ export default function Home() {
         <div className="sidebar-quote">
           <div className="quote-rule" />
           <p>DISCIPLINA HOY.<br />RESULTADOS SIEMPRE.</p>
-          <span>TRADING A HIGHER STANDARD</span>
+          <span>TRADE WITH PURPOSE</span>
         </div>
       </aside>
 
       <section className="workspace">
         <header className="topbar">
           <div className="searchbox">
-            <Search size={17} />
+            <Search size={16} />
             <span>Buscar...</span>
             <kbd>⌘ K</kbd>
           </div>
-          <div className="ticker-strip">
-            <span>MNQ <b>21,452.75</b> <em>+0.18%</em></span>
-            <span>NQ <b>21,455.00</b> <em>+0.17%</em></span>
-            <span>ES <b>5,711.50</b> <em>+0.12%</em></span>
+
+          <div className="market-status">
+            <span className="status-dot" />
+            <div>
+              <strong>Mercado conectado</strong>
+              <small>MNQ · NQ · ES</small>
+            </div>
           </div>
+
           <div className="top-actions">
-            <button className="icon-button"><Bell size={18} /></button>
+            <button className="icon-button" aria-label="Notificaciones"><Bell size={18} /></button>
             <div className="profile">
               <div className="avatar">RC</div>
               <div><b>Roberto C.</b><span>Plan Pro</span></div>
-              <ChevronDown size={16} />
+              <ChevronDown size={15} />
             </div>
           </div>
         </header>
 
         <div className="content">
           <section className="hero-card">
+            <div className="mountain mountain-one" />
+            <div className="mountain mountain-two" />
+            <div className="hero-glow" />
+
             <div className="hero-copy">
-              <span className="eyebrow">IRON TRADING · CONTROL CENTER</span>
+              <span className="eyebrow copper">IRON TRADING · CONTROL CENTER</span>
               <h1>Buenas tardes, Roberto.</h1>
-              <p>Tus cuentas están protegidas. Iron Autopilot opera dentro de los límites establecidos.</p>
+              <p>Todo bajo control. Tus cuentas, riesgo y automatización en un solo lugar.</p>
             </div>
+
             <div className="hero-time">
               <span>Domingo, 13 de Septiembre de 2026</span>
               <strong>04:26 PM</strong>
               <small>Arizona · MST</small>
             </div>
+
             <div className="hero-stats">
               <Metric value="3" label="Cuentas activas" />
               <Metric value="$150,000" label="Capital total" />
@@ -122,7 +130,7 @@ export default function Home() {
                   <button className="filter active">Activas</button>
                   <button className="filter">Evaluación</button>
                   <button className="filter">Fondeadas</button>
-                  <button className="outline-button"><Plus size={16} />Agregar cuenta</button>
+                  <button className="outline-button"><Plus size={15} /> Agregar cuenta</button>
                 </div>
               </div>
 
@@ -136,12 +144,17 @@ export default function Home() {
                         <span className={`status-pill ${account.type === 'Fondeada' ? 'funded' : 'evaluation'}`}>{account.type}</span>
                       </div>
                     </div>
+
                     <div className="account-money">
                       <div><span>Equity actual</span><strong>{account.equity}</strong></div>
                       <div className={account.pnl.startsWith('+') ? 'profit' : 'loss'}><span>Hoy</span><strong>{account.pnl}</strong></div>
                     </div>
-                    <div className="safety-line"><div style={{ width: `${account.safe}%` }} /><span>{account.safe}%</span></div>
+
+                    <div className="risk-labels"><span>Margen de seguridad</span><b>{account.safe}%</b></div>
+                    <div className="safety-line"><div style={{ width: `${account.safe}%` }} /></div>
+
                     <div className={`autopilot-chip ${account.active ? '' : 'paused'}`}>{account.active ? '● AUTOPILOT ACTIVO' : '● PAUSADO'}</div>
+
                     <div className="mini-stats">
                       <MiniStat value={String(account.trades)} label="Trades" />
                       <MiniStat value={account.risk} label="Riesgo usado" />
@@ -149,8 +162,9 @@ export default function Home() {
                     </div>
                   </article>
                 ))}
+
                 <button className="add-account-card">
-                  <div className="plus-ring"><Plus size={24} /></div>
+                  <div className="plus-ring"><Plus size={22} /></div>
                   <strong>Agregar nueva cuenta</strong>
                   <span>Centraliza todas tus cuentas en un solo lugar.</span>
                 </button>
@@ -160,11 +174,11 @@ export default function Home() {
             <aside className="right-stack">
               <div className="panel system-panel">
                 <div className="section-head compact"><h2>Estado del Sistema</h2><span className="system-badge">● Operativo</span></div>
-                <SystemRow icon={<Link2 size={16} />} label="Conexión NinjaTrader" value="Conectado" />
-                <SystemRow icon={<Activity size={16} />} label="Ejecución" value="Lista" />
-                <SystemRow icon={<Sparkles size={16} />} label="Motor de estrategias" value="Activo" />
-                <SystemRow icon={<ShieldCheck size={16} />} label="Gestión de riesgo" value="Protegido" />
-                <SystemRow icon={<Bell size={16} />} label="Notificaciones" value="Activadas" />
+                <SystemRow icon={<Link2 size={15} />} label="Conexión NinjaTrader" value="Conectado" />
+                <SystemRow icon={<Activity size={15} />} label="Ejecución" value="Lista" />
+                <SystemRow icon={<Sparkles size={15} />} label="Motor de estrategias" value="Activo" />
+                <SystemRow icon={<ShieldCheck size={15} />} label="Gestión de riesgo" value="Protegido" />
+                <SystemRow icon={<Bell size={15} />} label="Notificaciones" value="Activadas" />
               </div>
 
               <div className="panel daily-panel">
@@ -180,18 +194,19 @@ export default function Home() {
           </section>
 
           <section className="autopilot-panel panel">
-            <div className="section-head compact">
-              <div className="autopilot-title"><Bot size={19} /><h2>Iron Autopilot Global</h2><span className="running-pill">● RUNNING</span></div>
+            <div className="section-head compact autopilot-head">
+              <div className="autopilot-title"><Bot size={18} /><h2>Iron Autopilot Global</h2><span className="running-pill">● RUNNING</span></div>
               <span className="eyebrow">LIVE DECISION FLOW</span>
             </div>
+
             <div className="autopilot-flow">
-              <FlowStep icon={<TrendingUp size={21} />} title="Mercado" subtitle="Analizando" />
-              <div className="flow-arrow">→</div>
-              <FlowStep icon={<Target size={21} />} title="Estrategia" subtitle="Buscando setup" />
-              <div className="flow-arrow">→</div>
-              <FlowStep icon={<ShieldCheck size={21} />} title="Riesgo" subtitle="Validando" />
-              <div className="flow-arrow">→</div>
-              <FlowStep icon={<CircleDollarSign size={21} />} title="Ejecución" subtitle="Lista" />
+              <FlowStep icon={<TrendingUp size={20} />} title="Mercado" subtitle="Analizando" />
+              <div className="flow-line" />
+              <FlowStep icon={<Target size={20} />} title="Estrategia" subtitle="Buscando setup" />
+              <div className="flow-line" />
+              <FlowStep icon={<ShieldCheck size={20} />} title="Riesgo" subtitle="Validando" />
+              <div className="flow-line" />
+              <FlowStep icon={<CircleDollarSign size={20} />} title="Ejecución" subtitle="Lista" />
               <div className="current-state">
                 <span>Estado actual</span>
                 <strong>SEARCHING OPPORTUNITY</strong>
@@ -208,6 +223,7 @@ export default function Home() {
               </div>
               <div className="days"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div>
             </div>
+
             <div className="panel analytics-card trade-distribution">
               <div className="section-head compact"><h2>Distribución de Operaciones</h2></div>
               <div className="donut-row">
@@ -218,6 +234,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className="panel analytics-card news-card">
               <div className="section-head compact"><h2>Actividad Reciente</h2><button className="text-button">Ver más</button></div>
               <div className="news-list">
