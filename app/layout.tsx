@@ -1,9 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
-import './approved-home.css';
-import './reference-final.css';
-import './premium-polish.css';
-import './exact-match.css';
+import './final-home.css';
 
 export const metadata: Metadata = {
   title: 'IRON TRADING',
