@@ -2,7 +2,7 @@
 
 import {
   Activity, Bell, Bot, BriefcaseBusiness, ChartNoAxesCombined, ChevronDown,
-  CircleDollarSign, Crosshair, Gauge, Hammer, House, Link2, NotebookText,
+  CircleDollarSign, Crosshair, Gauge, House, Link2, NotebookText,
   Plus, Radio, Search, Settings, ShieldCheck, Sparkles, TrendingUp, Workflow,
 } from 'lucide-react';
 
@@ -21,11 +21,11 @@ export default function Home(){
   return <main className="iron-app">
     <aside className="iron-sidebar">
       <div className="iron-brand">
-        <div className="iron-thor-logo"><Hammer size={31} strokeWidth={2.2}/></div>
+        <div className="iron-brand-mark">IT</div>
         <div><div className="iron-brand-name">IRON TRADING</div><div className="iron-brand-sub">FUNDED TRADING INTELLIGENCE</div></div>
       </div>
       <nav className="iron-nav">{navItems.map(([Icon,label],i)=><button className={`iron-nav-item ${i===0?'is-active':''}`} key={label}><span className="nav-icon-wrap"><Icon size={18} strokeWidth={1.8}/></span><span>{label}</span></button>)}</nav>
-      <div className="sidebar-photo" aria-hidden="true"/>
+      <div className="sidebar-visual" aria-hidden="true"><div className="sidebar-phone"><div className="phone-chart"/></div></div>
       <div className="iron-side-footer"><div className="discipline-card">DISCIPLINA<br/>HOY.<br/>RESULTADOS<br/>SIEMPRE.</div><span>TRADING · A HIGHER STANDARD</span></div>
     </aside>
 
@@ -48,7 +48,7 @@ export default function Home(){
         <section className="control-grid">
           <div className="left-control-stack">
             <div className="portfolio-card iron-panel">
-              <div className="panel-heading"><div><h2>Mis Cuentas de Fondeo</h2></div><div className="account-tabs"><button>Todas</button><button className="active">Activas</button><button>Evaluación</button><button>Fondeadas</button><button className="add-btn"><Plus size={15}/>Agregar cuenta</button></div></div>
+              <div className="panel-heading"><h2>Mis Cuentas de Fondeo</h2><div className="account-tabs"><button>Todas</button><button className="active">Activas</button><button>Evaluación</button><button>Fondeadas</button><button className="add-btn"><Plus size={15}/>Agregar cuenta</button></div></div>
               <div className="funded-grid">{accounts.map((a,i)=><article className={`funded-card ${i===0?'featured':''}`} key={i}>
                 <div className="funded-card-head"><div className={`funded-logo ${i===2?'topstep':''}`}>{i===2?'T':'A'}</div><div><h3>{a.name}</h3><span className={`account-type ${a.type==='Fondeada'?'funded':''}`}>{a.type}</span></div></div>
                 <div className="funded-balance"><div><strong>{a.equity}</strong><span>Equity actual</span></div><div className={a.pnl.startsWith('+')?'profit':'loss'}><strong>{a.pnl}</strong><span>Hoy</span></div></div>
@@ -67,8 +67,8 @@ export default function Home(){
           </div>
 
           <aside className="system-column">
-            <div className="system-health iron-panel"><div className="system-title"><div><h2>Estado del Sistema</h2></div><b>● Operativo</b></div><System icon={<Link2 size={14}/>} label="Conexión NinjaTrader" value="Conectado"/><System icon={<Activity size={14}/>} label="Ejecución" value="Lista"/><System icon={<Sparkles size={14}/>} label="Motor de estrategias" value="Activo"/><System icon={<ShieldCheck size={14}/>} label="Gestión de riesgo" value="Protegido"/><System icon={<Bell size={14}/>} label="Notificaciones" value="Activadas"/></div>
-            <div className="daily-summary iron-panel"><div className="panel-heading simple"><div><h2>Resumen de Hoy</h2></div></div><Summary label="P&L del día" value="+$742" positive/><Summary label="Trades" value="6"/><Summary label="Win Rate" value="66.7%"/><Summary label="Mejor operación" value="+$312" positive/><Summary label="Peor operación" value="-$88" negative/><Summary label="Tiempo en mercado" value="2h 14m"/></div>
+            <div className="system-health iron-panel"><div className="system-title"><h2>Estado del Sistema</h2><b>● Operativo</b></div><System icon={<Link2 size={14}/>} label="Conexión NinjaTrader" value="Conectado"/><System icon={<Activity size={14}/>} label="Ejecución" value="Lista"/><System icon={<Sparkles size={14}/>} label="Motor de estrategias" value="Activo"/><System icon={<ShieldCheck size={14}/>} label="Gestión de riesgo" value="Protegido"/><System icon={<Bell size={14}/>} label="Notificaciones" value="Activadas"/></div>
+            <div className="daily-summary iron-panel"><div className="panel-heading simple"><h2>Resumen de Hoy</h2></div><Summary label="P&L del día" value="+$742" positive/><Summary label="Trades" value="6"/><Summary label="Win Rate" value="66.7%"/><Summary label="Mejor operación" value="+$312" positive/><Summary label="Peor operación" value="-$88" negative/><Summary label="Tiempo en mercado" value="2h 14m"/></div>
           </aside>
         </section>
 
