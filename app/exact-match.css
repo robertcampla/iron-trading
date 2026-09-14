@@ -1,56 +1,11 @@
-:root{--match-copper:#ed9a61;--match-copper-deep:#8f4829;--match-green:#27e3b1;--match-red:#ff6666;--match-panel:#071116;--match-line:#2a3842}
-
-/* Brand */
-.iron-thor-logo{width:48px;height:48px;flex:0 0 auto;display:grid;place-items:center;position:relative;border:1px solid rgba(237,154,97,.5);border-radius:10px;background:radial-gradient(circle at 45% 35%,rgba(255,190,139,.16),transparent 36%),linear-gradient(145deg,#2d1710,#7b3b26 52%,#1b1110);color:#ffc08f;box-shadow:inset 0 0 20px rgba(255,166,106,.08),0 0 18px rgba(237,154,97,.08)}
-.iron-thor-logo:before{content:"";position:absolute;inset:6px;border:1px solid rgba(255,192,143,.18);border-radius:7px}.iron-thor-logo svg{filter:drop-shadow(0 0 7px rgba(255,176,115,.28));transform:rotate(-8deg)}
-
-/* Global density closer to approved reference */
-.iron-app{grid-template-columns:220px minmax(0,1fr)}
-.iron-content{padding:0 10px 10px}
-.iron-topbar{height:58px}
-
-/* Hero: darker cinematic orange instead of blue daylight */
-.command-hero{height:190px;border-radius:0 0 12px 12px;isolation:isolate}
-.hero-photo{background-image:linear-gradient(90deg,rgba(2,7,10,.95) 0%,rgba(2,7,10,.74) 40%,rgba(14,10,8,.18) 72%,rgba(8,7,7,.28) 100%),linear-gradient(180deg,rgba(7,12,16,.08),rgba(8,5,3,.28)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1900&q=88');background-position:center 58%;filter:saturate(.7) sepia(.28) hue-rotate(335deg) contrast(1.15) brightness(.5)}
-.command-hero:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 76% 28%,rgba(240,125,61,.38),transparent 18%),linear-gradient(180deg,transparent 48%,rgba(2,7,9,.45) 100%)}
-.hero-vignette{z-index:2;background:linear-gradient(90deg,rgba(2,7,10,.96) 0%,rgba(2,7,10,.79) 37%,rgba(2,7,10,.2) 69%,rgba(2,7,10,.18) 100%)}
-.command-copy,.command-time,.hero-motto,.command-metrics{z-index:3}
-.command-copy{left:28px;top:25px}.command-copy h1{font-size:31px;letter-spacing:-.025em}.command-copy p{max-width:650px;color:#d7dcdf}
-.command-time{right:35px;top:17px}.hero-motto{right:28px;top:112px;font-size:8px;letter-spacing:.36em}
-.command-metrics{left:16px;right:360px;bottom:10px}.command-metric{min-height:57px;padding:9px 16px}.command-metric strong{font-size:20px}
-
-/* Portfolio composition: kill dead space, align rows */
-.portfolio-layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:9px;margin-top:8px;align-items:start}
-.portfolio-card{height:auto!important;min-height:0!important;align-self:start;padding:11px 12px 12px}
-.panel-heading{margin-bottom:8px;min-height:33px}
-.panel-heading h2{font-size:15px}.section-kicker{margin-bottom:3px!important}
-.account-tabs button{padding:5px 8px;font-size:7.5px}.account-tabs .add-btn{margin-left:5px}
-.funded-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:stretch}
-.funded-card,.funded-add-card{min-height:205px!important;height:205px;padding:11px 11px 10px}
-.funded-card-head{grid-template-columns:34px 1fr;gap:7px}.funded-logo{width:34px;height:34px}
-.funded-balance{margin-top:11px}.funded-balance strong{font-size:16px}.safety-row{margin-top:6px}.engine-pill{margin-top:8px}.funded-mini-grid{margin-top:8px;padding-top:8px}
-.funded-add-card{justify-content:center}.funded-add-card>b{margin-top:3px;padding:6px 13px}
-.system-column{gap:8px}.system-health,.daily-summary{padding:10px}.system-row,.summary-row{min-height:31px}
-
-/* Make the right stack equal the account block height */
-.system-health{min-height:205px}.daily-summary{min-height:205px}.system-column{display:grid;grid-template-rows:1fr 1fr}
-
-/* Autopilot pulled upward and tightened */
-.autopilot-command{margin-top:8px;padding:9px 11px}.autopilot-topline{margin-bottom:6px}.autopilot-rail{min-height:82px;padding:8px 12px;grid-template-columns:max-content 36px max-content 36px max-content 36px max-content minmax(220px,1fr)}
-.flow-step>div{width:40px;height:40px}.flow-step{min-width:84px}.decision-state{padding-left:14px}
-
-/* Bottom cards aligned, no wasted vertical space */
-.insight-grid{grid-template-columns:1.02fr 1fr 1.06fr;gap:9px;margin-top:8px;padding-bottom:0}.insight-card{min-height:142px!important;height:142px;padding:10px}.performance-chart{height:88px;margin-top:4px}.distribution-body{height:86px}.news-lines p{padding:6px 0;font-size:7.8px}
-.brand-footer{margin-top:8px;min-height:70px;height:70px;padding:0 13px;grid-template-columns:240px 1fr 140px 72px;overflow:hidden}.brand-footer blockquote{font-size:10.5px}.signature{font-size:17px}
-
-/* Sidebar closer to approved reference */
-.iron-sidebar{padding:17px 14px 14px}.iron-brand{padding-bottom:18px}.iron-brand-name{font-size:13px}.iron-nav-item{height:43px}.sidebar-photo{height:245px;opacity:.5;background:linear-gradient(180deg,transparent 0%,rgba(4,8,11,.84) 40%,#05090c 100%),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=80') center 62%/cover no-repeat;filter:saturate(.5) sepia(.22) hue-rotate(335deg) contrast(1.08) brightness(.66)}
-.discipline-card{padding:13px 11px;margin-bottom:11px}
-
-/* More uniform professional icon containers */
-.nav-icon-wrap{border-color:rgba(255,255,255,.045);background:rgba(255,255,255,.018)}
-.iron-nav-item.is-active .nav-icon-wrap{box-shadow:inset 0 0 16px rgba(237,154,97,.06)}
-.auto-icon{border-radius:50%;background:rgba(237,154,97,.08)}
-.system-row>span{width:22px;height:22px;display:grid;place-items:center;border-radius:6px;background:rgba(39,227,177,.055)}
-
-@media(max-width:1350px){.portfolio-layout{grid-template-columns:minmax(0,1fr) 250px}.funded-card,.funded-add-card{height:198px;min-height:198px!important}.system-health,.daily-summary{min-height:198px}.command-metrics{right:280px}}
+:root{--match-copper:#ee9a60;--match-green:#28e5b0;--match-red:#ff5d61;--match-panel:#071116;--match-line:#2b3942}
+.iron-app{grid-template-columns:220px minmax(0,1fr)}.iron-content{padding:0 12px 12px}.iron-topbar{height:60px}.iron-sidebar{padding:18px 14px 15px}.iron-brand{padding-bottom:20px}.iron-nav{gap:8px}.iron-nav-item{height:48px;font-size:13px}.nav-icon-wrap{width:30px;height:30px;border:0;background:transparent}.iron-nav-item.is-active{background:linear-gradient(90deg,rgba(238,154,96,.18),rgba(255,255,255,.035));border-color:rgba(238,154,96,.55)}
+.iron-thor-logo{width:50px;height:50px;border-radius:11px;background:radial-gradient(circle at 45% 35%,rgba(255,190,139,.2),transparent 38%),linear-gradient(145deg,#2d1710,#7b3b26 52%,#1b1110);color:#ffc08f}
+.command-hero{height:194px;border-radius:0 0 13px 13px;overflow:hidden}.hero-photo{background-image:linear-gradient(90deg,rgba(2,7,10,.94),rgba(2,7,10,.72) 38%,rgba(9,7,6,.12) 72%),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2000&q=90');background-position:center 56%;filter:saturate(.72) sepia(.38) hue-rotate(330deg) contrast(1.22) brightness(.48)}.command-hero:before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(circle at 76% 26%,rgba(242,116,52,.5),transparent 19%),linear-gradient(180deg,transparent 50%,rgba(2,7,9,.48));pointer-events:none}.hero-vignette{z-index:2}.command-copy,.command-time,.hero-motto,.command-metrics{z-index:3}.command-copy{left:30px;top:27px}.command-copy h1{font-size:31px}.command-copy p{font-size:12.5px}.command-time{right:32px;top:18px}.hero-motto{right:28px;top:114px}.command-metrics{left:16px;right:360px;bottom:10px}.command-metric{min-height:58px;padding:9px 16px}.command-metric strong{font-size:20px}
+/* Exact central composition: left side contains accounts + autopilot; right side spans both */
+.portfolio-layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:10px;margin-top:8px;align-items:stretch}.portfolio-card{padding:12px;height:302px!important;min-height:302px!important}.panel-heading{margin-bottom:9px}.panel-heading h2{font-size:16px}.funded-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.funded-card,.funded-add-card{height:236px!important;min-height:236px!important;padding:13px}.funded-card-head{grid-template-columns:39px 1fr;gap:8px}.funded-logo{width:39px;height:39px;font-size:20px}.funded-logo.topstep{font-size:25px}.funded-card h3{font-size:11px}.funded-balance{margin-top:14px}.funded-balance strong{font-size:18px}.safety-track{height:7px}.engine-pill{margin-top:11px}.funded-mini-grid{margin-top:11px;padding-top:11px}.funded-add-card>div{width:45px;height:45px}.funded-add-card strong{font-size:11px}.funded-add-card span{font-size:8.5px;line-height:1.45}.system-column{display:grid;grid-template-rows:1fr 1fr;gap:9px;height:452px}.system-health,.daily-summary{padding:12px;min-height:0}.system-title h2,.daily-summary h2{font-size:15px}.system-row,.summary-row{min-height:38px}.system-row p,.summary-row span{font-size:8.5px}.system-row b,.summary-row b{font-size:8.5px}
+.autopilot-command{position:absolute;left:232px;right:282px;margin-top:318px;height:142px;padding:11px 12px;z-index:2}.autopilot-topline{margin-bottom:8px}.autopilot-brand h2{font-size:14px}.autopilot-rail{height:96px;min-height:96px;padding:10px 14px;grid-template-columns:max-content 42px max-content 42px max-content 42px max-content minmax(230px,1fr)}.flow-step{min-width:96px}.flow-step>div{width:47px;height:47px}.rail-arrow{font-size:21px}.decision-state{padding-left:18px}.decision-state strong{font-size:11px}
+/* reserve the autopilot row, then lower cards */
+.insight-grid{margin-top:158px;grid-template-columns:1fr 1fr 1.18fr;gap:10px}.insight-card{height:160px!important;min-height:160px!important;padding:12px}.insight-head h2{font-size:12px}.performance-chart{height:102px}.distribution-body{height:101px}.news-lines p{padding:7px 0;font-size:8.5px}.brand-footer{height:82px;min-height:82px;margin-top:9px;padding:0 14px;grid-template-columns:250px 1fr 150px 82px;background:linear-gradient(90deg,rgba(7,16,21,.98),rgba(13,22,27,.97),rgba(7,16,21,.98))}.brand-footer blockquote{font-size:11px}.signature{font-size:19px}
+.sidebar-photo{height:310px;opacity:.62;background:linear-gradient(180deg,transparent 0%,rgba(4,8,11,.45) 25%,#05090c 96%),url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=700&q=85') center/cover no-repeat;filter:saturate(.55) sepia(.25) hue-rotate(330deg) brightness(.58)}.iron-side-footer{bottom:8px}.discipline-card{max-width:168px;padding:16px 13px;font-size:9px}
+@media(max-width:1350px){.portfolio-layout{grid-template-columns:minmax(0,1fr) 255px}.autopilot-command{right:267px}.command-metrics{right:300px}}
