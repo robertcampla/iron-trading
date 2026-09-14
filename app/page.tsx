@@ -10,6 +10,7 @@ import {
   CircleDollarSign,
   Crosshair,
   Gauge,
+  Hammer,
   House,
   Link2,
   NotebookText,
@@ -44,7 +45,7 @@ export default function Home(){
   return <main className="iron-app">
     <aside className="iron-sidebar">
       <div className="iron-brand">
-        <div className="iron-helmet-logo" aria-label="Iron Trading"><span className="helmet-eye left"/><span className="helmet-eye right"/><span className="helmet-jaw"/></div>
+        <div className="iron-thor-logo" aria-label="Iron Trading Mjolnir mark"><Hammer size={31} strokeWidth={2.2}/></div>
         <div><div className="iron-brand-name">IRON TRADING</div><div className="iron-brand-sub">FUNDED TRADING INTELLIGENCE</div></div>
       </div>
 
