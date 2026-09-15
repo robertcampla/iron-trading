@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './final-home.css';
+import './ui-polish.css';
 
 export const metadata: Metadata = {
   title: 'IRON TRADING',
