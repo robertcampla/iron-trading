@@ -8,60 +8,33 @@
 .iron-nav-item:active,
 .iron-nav-item * { text-decoration:none !important; }
 
-.iron-nav-item {
-  position:relative;
-  cursor:pointer;
-  transition:background .22s ease,border-color .22s ease,color .22s ease,transform .22s ease,box-shadow .22s ease;
-}
-.iron-nav-item:hover {
-  color:#fff !important;
-  border-color:rgba(239,153,94,.30) !important;
-  background:linear-gradient(90deg,rgba(239,153,94,.13),rgba(239,153,94,.035)) !important;
-  transform:translateX(3px);
-  box-shadow:inset 2px 0 0 rgba(241,155,97,.72),0 7px 22px rgba(0,0,0,.14);
-}
+.iron-nav-item { position:relative; cursor:pointer; transition:background .22s ease,border-color .22s ease,color .22s ease,transform .22s ease,box-shadow .22s ease; }
+.iron-nav-item:hover { color:#fff !important; border-color:rgba(239,153,94,.30) !important; background:linear-gradient(90deg,rgba(239,153,94,.13),rgba(239,153,94,.035)) !important; transform:translateX(3px); box-shadow:inset 2px 0 0 rgba(241,155,97,.72),0 7px 22px rgba(0,0,0,.14); }
 .iron-nav-item:hover .nav-icon-wrap { color:#ffab70 !important; transform:scale(1.06); }
 .nav-icon-wrap { transition:color .22s ease,transform .22s ease; }
 .iron-nav-item.is-active { text-decoration:none !important; }
 
-/* Approved sidebar: quote sits above the visual; artwork is a premium command-center scene. */
-.iron-side-footer {
-  margin-top:auto;
-  margin-bottom:310px;
-  position:relative;
-  z-index:8;
-}
-.discipline-card {
-  margin-bottom:12px;
-  background:rgba(3,8,11,.91) !important;
-  border-color:rgba(239,153,94,.72) !important;
-  box-shadow:0 12px 32px rgba(0,0,0,.28);
-}
+/* Sidebar composition: plaque remains above a real photographic trading visual. */
+.iron-side-footer { margin-top:auto; margin-bottom:310px; position:relative; z-index:8; }
+.discipline-card { margin-bottom:12px; background:rgba(3,8,11,.94) !important; border-color:rgba(239,153,94,.72) !important; box-shadow:0 12px 32px rgba(0,0,0,.28); }
 .sidebar-visual {
   height:300px !important;
   z-index:1;
   pointer-events:none;
-  background-image:linear-gradient(180deg,rgba(4,9,12,.12),rgba(4,9,12,.03) 52%,rgba(4,9,12,.52)),url('/sidebar-command-center.svg') !important;
+  background-image:
+    linear-gradient(180deg,#04090c 0%,rgba(4,9,12,.42) 14%,rgba(4,9,12,.08) 48%,rgba(4,9,12,.32) 78%,#04090c 100%),
+    linear-gradient(90deg,rgba(3,8,11,.20),rgba(239,153,94,.10)),
+    url('https://images.unsplash.com/photo-aGKspo5OIyg?auto=format&fit=crop&w=900&q=88') !important;
   background-position:center center !important;
   background-size:cover !important;
   background-repeat:no-repeat !important;
-  filter:none !important;
-  border-top:1px solid rgba(239,153,94,.10);
+  filter:saturate(.62) sepia(.18) hue-rotate(338deg) brightness(.62) contrast(1.12) !important;
+  border-top:0 !important;
+  box-shadow:inset 0 45px 55px rgba(4,9,12,.74),inset 0 -48px 58px rgba(4,9,12,.82);
 }
-/* Old synthetic phone is replaced by the integrated premium artwork. */
 .sidebar-phone { display:none !important; }
 
-.accounts-page a,
-.accounts-page a:link,
-.accounts-page a:visited,
-.accounts-page a:hover,
-.accounts-page a:active { text-decoration:none !important; }
+.accounts-page a,.accounts-page a:link,.accounts-page a:visited,.accounts-page a:hover,.accounts-page a:active { text-decoration:none !important; }
 
-@media (max-height:900px) {
-  .iron-side-footer { margin-bottom:275px; }
-  .sidebar-visual { height:265px !important; }
-}
-@media (max-height:780px) {
-  .iron-side-footer { margin-bottom:230px; }
-  .sidebar-visual { height:220px !important; }
-}
+@media (max-height:900px) { .iron-side-footer { margin-bottom:275px; } .sidebar-visual { height:265px !important; } }
+@media (max-height:780px) { .iron-side-footer { margin-bottom:230px; } .sidebar-visual { height:220px !important; } }
