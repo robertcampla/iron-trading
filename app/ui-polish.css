@@ -35,10 +35,10 @@
   text-decoration: none !important;
 }
 
-/* Keep the discipline plaque above the photography/phone instead of covering it. */
+/* Approved sidebar composition: plaque clearly ABOVE the artwork, never over it. */
 .iron-side-footer {
   margin-top: auto;
-  margin-bottom: 250px;
+  margin-bottom: 315px;
   position: relative;
   z-index: 8;
 }
@@ -59,6 +59,9 @@
   text-decoration: none !important;
 }
 
+@media (max-height: 900px) {
+  .iron-side-footer { margin-bottom: 275px; }
+}
 @media (max-height: 780px) {
-  .iron-side-footer { margin-bottom: 205px; }
+  .iron-side-footer { margin-bottom: 235px; }
 }
