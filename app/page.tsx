@@ -2,7 +2,7 @@
 
 import {
   Activity, Bell, Bot, BriefcaseBusiness, ChartNoAxesCombined, ChevronDown,
-  CircleDollarSign, Crosshair, Gauge, House, Link2, NotebookText,
+  CircleDollarSign, Crosshair, FileText, Gauge, House, Landmark, Link2, NotebookText,
   Plus, Radio, Search, Settings, ShieldCheck, Sparkles, TrendingUp, Workflow,
 } from 'lucide-react';
 
@@ -42,7 +42,14 @@ export default function Home(){
           <div className="command-copy"><span className="hero-kicker">IRON TRADING · COMMAND CENTER</span><h1>Buenas tardes, Roberto.</h1><p>Tus cuentas están protegidas. El Autopilot opera dentro de los límites establecidos.</p></div>
           <div className="command-time"><span>Sábado, 13 de Septiembre de 2026</span><strong>04:26 PM</strong><small>Hora de Arizona (MST)</small></div>
           <div className="hero-motto">MISMO ENFOQUE<br/><b>MAYORES RESULTADOS</b></div>
-          <div className="command-metrics"><Metric value="3" label="Cuentas activas"/><Metric value="$150,000" label="Capital total"/><Metric value="+$742" label="P&L hoy" positive/><Metric value="82%" label="Margen de seguridad"/><Metric value="12" label="Operaciones hoy"/></div>
+        </section>
+
+        <section className="command-metrics">
+          <Metric icon={<BriefcaseBusiness size={17}/>} tone="orange" value="3" label="Cuentas activas"/>
+          <Metric icon={<Landmark size={17}/>} tone="blue" value="$150,000" label="Capital total"/>
+          <Metric icon={<TrendingUp size={17}/>} tone="green" value="+$742" label="P&L hoy" positive/>
+          <Metric icon={<ShieldCheck size={17}/>} tone="teal" value="82%" label="Margen de seguridad"/>
+          <Metric icon={<FileText size={17}/>} tone="amber" value="12" label="Operaciones hoy"/>
         </section>
 
         <section className="control-grid">
@@ -84,7 +91,7 @@ export default function Home(){
   </main>
 }
 
-function Metric({value,label,positive=false}:{value:string;label:string;positive?:boolean}){return <div className="command-metric"><strong className={positive?'profit':''}>{value}</strong><span>{label}</span></div>}
+function Metric({icon,tone,value,label,positive=false}:{icon:React.ReactNode;tone:string;value:string;label:string;positive?:boolean}){return <div className="command-metric"><div className={`metric-icon ${tone}`}>{icon}</div><strong className={positive?'profit':''}>{value}</strong><span>{label}</span></div>}
 function Mini({value,label}:{value:string;label:string}){return <div><strong>{value}</strong><span>{label}</span></div>}
 function System({icon,label,value}:{icon:React.ReactNode;label:string;value:string}){return <div className="system-row"><span>{icon}</span><p>{label}</p><b>{value}</b></div>}
 function Summary({label,value,positive,negative}:{label:string;value:string;positive?:boolean;negative?:boolean}){return <div className="summary-row"><span>{label}</span><b className={positive?'profit':negative?'loss':''}>{value}</b></div>}
