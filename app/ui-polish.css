@@ -14,7 +14,7 @@
 .nav-icon-wrap { transition:color .22s ease,transform .22s ease; }
 .iron-nav-item.is-active { text-decoration:none !important; }
 
-/* Sidebar composition: plaque remains above a real photographic trading visual. */
+/* Sidebar: real photographic workspace, blended into the IRON palette. */
 .iron-side-footer { margin-top:auto; margin-bottom:310px; position:relative; z-index:8; }
 .discipline-card { margin-bottom:12px; background:rgba(3,8,11,.94) !important; border-color:rgba(239,153,94,.72) !important; box-shadow:0 12px 32px rgba(0,0,0,.28); }
 .sidebar-visual {
@@ -22,15 +22,15 @@
   z-index:1;
   pointer-events:none;
   background-image:
-    linear-gradient(180deg,#04090c 0%,rgba(4,9,12,.42) 14%,rgba(4,9,12,.08) 48%,rgba(4,9,12,.32) 78%,#04090c 100%),
-    linear-gradient(90deg,rgba(3,8,11,.20),rgba(239,153,94,.10)),
-    url('https://images.unsplash.com/photo-aGKspo5OIyg?auto=format&fit=crop&w=900&q=88') !important;
+    linear-gradient(180deg,#04090c 0%,rgba(4,9,12,.20) 18%,rgba(4,9,12,.04) 54%,rgba(4,9,12,.32) 82%,#04090c 100%),
+    linear-gradient(90deg,rgba(3,8,11,.16),rgba(239,153,94,.06)),
+    url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=88') !important;
   background-position:center center !important;
   background-size:cover !important;
   background-repeat:no-repeat !important;
-  filter:saturate(.62) sepia(.18) hue-rotate(338deg) brightness(.62) contrast(1.12) !important;
+  filter:saturate(.72) sepia(.10) brightness(.82) contrast(1.08) !important;
   border-top:0 !important;
-  box-shadow:inset 0 45px 55px rgba(4,9,12,.74),inset 0 -48px 58px rgba(4,9,12,.82);
+  box-shadow:inset 0 34px 42px rgba(4,9,12,.55),inset 0 -38px 46px rgba(4,9,12,.68);
 }
 .sidebar-phone { display:none !important; }
 
